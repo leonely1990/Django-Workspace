@@ -6,12 +6,12 @@
 <nav>
     <div class="user">
         <div class="img-user">
-            <img src="{% static 'images/user.png' %}" alt="user">
+            <a href="#"><img src="{% static 'images/user.png' %}" alt="user"></a>
         </div>
     </div>
 
     <ul class="br-btn">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="{% url 'principal' %}">Inicio</a></li>
         <li><a href="#">Boton</a></li>
         <li><a href="#">Boton</a></li>
         <li><a href="#">Boton</a></li>
