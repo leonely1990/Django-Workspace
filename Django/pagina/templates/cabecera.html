@@ -44,7 +44,7 @@
                         </div>
                     </div>  <!-- category-wrap.// -->
                 </div> <!-- col.// -->
-                <a href="store.html" class="btn btn-outline-primary">Tienda</a>
+                <a href="{% url 'store' %}" class="btn btn-outline-primary">Tienda</a>
                 <div class="col-lg  col-md-6 col-sm-12 col">
                     <form action="#" class="search">
                         <div class="input-group w-100">
@@ -63,8 +63,8 @@
                         <div class="widget-header">
                             <small class="title text-muted">Bienvenido visitante!</small>
                             <div> 
-                                <a href="{% url 'iniciar' %}">Login</a> <span class="dark-transp"> | </span>
-                                <a href="{% url 'registro' %}"> Registrar</a>
+                                <a href="#">Login</a> <span class="dark-transp"> | </span>
+                                <a href="#"> Registrar</a>
                             </div>
                         </div>
                         <a href="cart.html" class="widget-header pl-3 ml-3">

@@ -1,10 +1,10 @@
 from django.shortcuts import render
+from store.models import Product
 
 def index(request):
-    return render(request, 'leonel/index.html')
-
-def registro(request):
-    return render(request, 'register.html')
-
-def iniciar(request):
-    return render(request, 'signin.html')
+    
+    productos = Product.objects.all().filter(is_available=True)
+    
+    context = {'products':productos}
+    
+    return render(request, 'leonel/index.html', context)
