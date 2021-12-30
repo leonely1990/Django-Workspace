@@ -12,7 +12,7 @@ def store(request, category_slug=None):
     if category_slug != None:
         categories = get_object_or_404(Categoria, slug=category_slug)
         productos = Product.objects.filter(category=categories, is_available=True)
-        productos_cant = productos.count() 
+        productos_cant = productos.count()  
     else:       
         productos = Product.objects.all().filter(is_available=True)
         productos_cant = productos.count()
