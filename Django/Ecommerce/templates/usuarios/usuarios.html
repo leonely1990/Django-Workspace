@@ -1,0 +1,37 @@
+{% extends 'template_01.html' %}
+
+{% block title %}Usuario{% endblock title %}
+
+{% block content_main %}
+
+    <div class="container">
+        <table class="table table-hover table-responsive">
+            <h2>Lista de Usuarios</h2>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Perfil</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Edad</th>
+                    <th>Genero</th>
+                    <th>Correo E</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                
+                    <tr>
+                        <th>{{usuario.id}}</th>
+                        <th><img src="{{ usuario.foto.url }}" alt="{{usuario.nombres_usuario}}" width="40px" height="40px" style="border-radius: 50px;"></th>
+                        <th>{{usuario.nombres_usuario}}, {{usuario.apellidos_usuario}}</th>
+                        <th>{{usuario.fecha_nacimiento}}</th>
+                        <th>{{usuario.genero_usuario}}</th>
+                        <th>{{usuario.correo_e}}</th>
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock content_main %}
